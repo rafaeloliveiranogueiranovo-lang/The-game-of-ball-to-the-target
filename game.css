@@ -1,0 +1,121 @@
+
+Action: file_editor view /app/frontend/public/game.css
+Observation: /app/frontend/public/game.css:
+1|* {
+2|    margin: 0;
+3|    padding: 0;
+4|    box-sizing: border-box;
+5|    -webkit-tap-highlight-color: transparent;
+6|}
+7|
+8|body {
+9|    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+10|    overflow: hidden;
+11|    width: 100vw;
+12|    height: 100vh;
+13|    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+14|}
+15|
+16|.game-container {
+17|    width: 100%;
+18|    height: 100%;
+19|    position: relative;
+20|    display: flex;
+21|    justify-content: center;
+22|    align-items: center;
+23|}
+24|
+25|#gameCanvas {
+26|    display: block;
+27|    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+28|    border-radius: 8px;
+29|    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+30|    cursor: crosshair;
+31|    max-width: 100%;
+32|    max-height: 100%;
+33|}
+34|
+35|.score-display {
+36|    position: absolute;
+37|    top: 20px;
+38|    left: 50%;
+39|    transform: translateX(-50%);
+40|    z-index: 10;
+41|    background: rgba(255, 255, 255, 0.95);
+42|    padding: 12px 24px;
+43|    border-radius: 25px;
+44|    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+45|}
+46|
+47|#score {
+48|    font-size: 20px;
+49|    font-weight: bold;
+50|    color: #1a1a2e;
+51|    letter-spacing: 0.5px;
+52|}
+53|
+54|.message {
+55|    position: absolute;
+56|    top: 50%;
+57|    left: 50%;
+58|    transform: translate(-50%, -50%);
+59|    background: rgba(255, 255, 255, 0.98);
+60|    padding: 30px 50px;
+61|    border-radius: 15px;
+62|    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+63|    text-align: center;
+64|    z-index: 100;
+65|    font-size: 28px;
+66|    font-weight: bold;
+67|    color: #1a1a2e;
+68|    min-width: 300px;
+69|}
+70|
+71|.message.hidden {
+72|    display: none;
+73|}
+74|
+75|.message.victory {
+76|    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+77|    color: white;
+78|}
+79|
+80|.message.defeat {
+81|    background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+82|    color: white;
+83|}
+84|
+85|/* Responsividade Mobile */
+86|@media (max-width: 768px) {
+87|    #score {
+88|        font-size: 16px;
+89|    }
+90|    
+91|    .score-display {
+92|        padding: 10px 20px;
+93|        top: 10px;
+94|    }
+95|    
+96|    .message {
+97|        font-size: 22px;
+98|        padding: 25px 40px;
+99|        min-width: 250px;
+100|    }
+101|    
+102|    #gameCanvas {
+103|        border-radius: 0;
+104|    }
+105|}
+106|
+107|@media (max-width: 480px) {
+108|    #score {
+109|        font-size: 14px;
+110|    }
+111|    
+112|    .message {
+113|        font-size: 18px;
+114|        padding: 20px 30px;
+115|        min-width: 200px;
+116|    }
+117|}
+118|
